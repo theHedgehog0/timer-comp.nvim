@@ -1,0 +1,5 @@
+local gen_date = function()
+	local timer = vim.loop.new_timer()
+	timer:start(0, 1000, vim.schedule_wrap(function()
+		print(os.date("%d %b %Y %H:%M:%S"))
+end))
